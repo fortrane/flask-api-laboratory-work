@@ -1,0 +1,248 @@
+{
+    "info": {
+        "_postman_id": "unique-id",
+        "name": "Flask API Collection",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Convert to Base 13",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"inputdata\": 15\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{url}}/api/convert_to_base13",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "convert_to_base13"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Multiply Matrix Scalar",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"inputdata\": { \"matrix\": [[1, 2], [3, 4]], \"scalar\": 2 }\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{url}}/api/multiply_matrix_scalar",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "multiply_matrix_scalar"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Solve Quadratic Equation",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"inputdata\": [1, -5, 6]\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{url}}/api/solve_quadratic",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "solve_quadratic"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Remove Vowels",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"inputdata\": \"This is a test string\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{url}}/api/remove_vowels",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "remove_vowels"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "API History",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{url}}/api/history?limit=5",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "history"
+                    ],
+                    "query": [
+                        {
+                            "key": "limit",
+                            "value": "5"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Convert to Base 13 - Invalid Input",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"inputdata\": \"invalid\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{url}}/api/convert_to_base13",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "convert_to_base13"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Multiply Matrix Scalar - Invalid Matrix",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"inputdata\": { \"matrix\": [[1, \"invalid\"], [3, 4]], \"scalar\": 2 }\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{url}}/api/multiply_matrix_scalar",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "multiply_matrix_scalar"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Solve Quadratic Equation - Incorrect Number of Coefficients",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"inputdata\": [1, -5]\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{url}}/api/solve_quadratic",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "solve_quadratic"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Remove Vowels - Non-String Input",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"inputdata\": 12345\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{url}}/api/remove_vowels",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "remove_vowels"
+                    ]
+                }
+            }
+        }
+    ],
+    "variable": [
+        {
+            "id": "unique-id",
+            "key": "url",
+            "value": "http://127.0.0.1:5000",
+            "type": "string"
+        }
+    ]
+}
