@@ -133,6 +133,42 @@
             }
         },
         {
+            "name": "Get Specific History Item by ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{url}}/api/history/1",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "history",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete History Item by ID",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "{{url}}/api/history/1",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "history",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
             "name": "Convert to Base 13 - Invalid Input",
             "request": {
                 "method": "POST",
