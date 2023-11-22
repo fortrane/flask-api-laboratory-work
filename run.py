@@ -86,6 +86,20 @@ def api_remove_vowels():
     return jsonify({'result': result})
 
 
+@app.route('/api/history/<int:id>', methods=['DELETE'])
+def delete_history(id):
+    history_item = RequestHistory.query.get_or_404(id)
+    db.session.delete(history_item)
+    db.session.commit()
+    return jsonify({'message': 'Deleted successfully'}), 200
+
+
+@app.route('/api/history/<int:id>', methods=['GET'])
+def get_specific_history(id):
+    history_item = RequestHistory.query.get_or_404(id)
+    return jsonify({'id': history_item.id, 'endpoint': history_item.endpoint, 'input': history_item.input_data, 'result': history_item.result, 'timestamp': history_item.timestamp})
+
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
