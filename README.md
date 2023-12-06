@@ -38,7 +38,7 @@ Activate venv
 Install packages from requirements.txt
 
 ```cmd
-  pip freeze > requirements.txt
+  pip install -r requirements.txt
 ```
 
 Run file "run.py"
